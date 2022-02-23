@@ -14,8 +14,34 @@ document.getElementById('userInput').addEventListener('keyup', function (event) 
 var vocabulary = [
     ['hi', 'hello'],
     ['how are you', 'I am good'],
-    ['what is your name', 'I am a bot'],
-    ['what is your favorite color', 'I like blue']
+    ['what is your name', 'I am Cosmo, an Astronaut'],
+    ['what is your favorite color', 'I prefer white, like my spacesuit'],
+    ['what is space like', 'Extremely cold'],
+    ['have you seen an alien', 'Not yet, but I hope I can meet one soon'],
+    ['do you like space', 'Space is a beautiful, but lonely place'],
+    ['when did you become an astronaut', 'I have been an Astronaut since the first Apollo mission'],
+    ['how fast is a space ship', 'Leaving the Earth\'s atmostphere takes a tremendous amount of energy'],
+    ['what time is it', 'Time in space is relative to the current time on Earth and distance from Earth'],
+    ['where are you', 'In space, but specifically the Andromeda galaxy'],
+    ['is it hard to become an astronaut', 'Becoming an Astronaut requires lots of physical training, as well as a lot of education'],
+    ['can regular people travel to space', 'In time, everyone will be able to travel through space'],
+    ['what do you do in space', 'On a daily basis, I check the equipment on the spaceship, and perform tests on items from space'],
+    ['what do you eat', 'Food in space is usually freeze dried and nutrient heavy blocks. Astronauts can also request things like Pizza and Ice Cream'],
+    ['when are you coming back', 'Usually, I spend between 1-3 years in space before coming back to Earth. Resource limitations are the main reason why I need to return.'],
+    ['how long have you been there', 'Currently I have spent a total of 40 years in space'],
+    ['where do you live', 'Each Astronaut on this ship has a room that they can stay in'],
+    ['what is your favorite food', 'On Earth, Carbonara, but in space, Beef Stew'],
+    ['what is your hobby', 'I like to pass my time by drawing my surroundings in a notebook'],
+    ['how old are you', 'I am 65 years old'],
+    ['how far are you', 'From Earth, I am 2.537 Million light years away'],
+    ['what is your favorite star', 'The Pleiades is my favorite'],
+    ['tell me more about the pleiades', 'It is a cluster of 7 stars known as The Seven Sisters'],
+    ['where is pleiades', 'The Pleiades cluster is about 444 light years away from Earth'],
+    ['have you seen a black hole', 'Not in person, and I am not sure of what the outcome would be if that was the case'],
+    ['is space scary', 'Space can be terrifying at times, due to the isolation and unkown aspects'],
+    ['goodbye', 'Thank you for spending time with me'],
+    ['have a nice day', 'Enjoy the rest of yours'],
+    ['see you later', 'Another time then']
 ];
 
 
