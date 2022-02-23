@@ -19,7 +19,7 @@ Using the power of our chat engine you can simulate talking to a Astronaut!
 
 ## Features
 
-- 50 + responces!
+- 50 + responses!
 - Live previews
 - Fullscreen mode
 - Cross platform
