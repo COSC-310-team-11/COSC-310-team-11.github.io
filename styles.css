@@ -26,3 +26,15 @@ a {
 button {
     background-color: #c2454c;
 }
+
+.user_message{
+    text-align: left;
+    font-style: italic;
+    font-size: 20px;
+    color: rgb(238, 238, 238);
+}
+
+.bot_message{
+    text-align: left;
+    font-size: 25px;
+}
