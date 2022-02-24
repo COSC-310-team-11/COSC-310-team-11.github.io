@@ -44,6 +44,9 @@ var vocabulary = [
     ['see you later', 'Another time then']
 ];
 
+//this is the chat log
+const chatLog = [];
+
 
 function bestMatch(str1) {
     var bestMatch = 0;
@@ -67,6 +70,9 @@ function whatSaid() {
     var input = document.getElementById('userInput');
     var userInput = input.value.toLowerCase();
 
+    //print out user message
+    addToChatLog('user', userInput);
+
     //this strips the punctuation and the spaces from user input
     var punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
 
@@ -77,7 +83,8 @@ function whatSaid() {
 
 
     var respo = vocabulary[bestmatching][1];
-    document.getElementById('botRespo').innerHTML = respo;
+    //print out bot message
+    addToChatLog('bot', respo);
 
     // var dist = levenshteinDistance(vocabulary[i][0], userInput);
 }
@@ -108,3 +115,15 @@ const levenshteinDistance = (str1 = '', str2 = '') => {
 
 
 
+const addToChatLog = (poster, message) => {
+    //add to list
+    chatLog.push({poster: poster, message: message});
+
+    //print out
+    document.getElementById('botRespo').innerHTML = chatLog.reduce(
+        (str, current_message, _) => {
+            return str + `<p class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</p>`;
+        },
+        ''
+    );
+}
