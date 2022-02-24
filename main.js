@@ -2,11 +2,13 @@
 // CHAT BOT!!!!, maybe
 
 // key listener for the enter key for the text box
-document.getElementById('userInput').addEventListener('keyup', function (event) {
-    event.preventDefault();
-    if (event.key === 'Enter') {
-        whatSaid();
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('userInput').addEventListener('keyup', function (event) {
+        event.preventDefault();
+        if (event.key === 'Enter') {
+            whatSaid();
+        }
+    });
 });
 
 
