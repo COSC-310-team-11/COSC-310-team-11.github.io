@@ -1,0 +1,28 @@
+.title {
+    background: rgb(3,19,38);
+    background: linear-gradient(180deg, rgba(3,19,38,1) 0%, rgba(7,43,88,1) 100%); 
+    color: #c6cfcd;
+    text-align: center;
+    padding: 75px;
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+    
+}
+
+.knowledge {
+    background-color: #5BC3EB;
+    color: white;
+    padding-top: 320px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+a {
+    color: rgb(141, 131, 131);
+}
+button {
+    background-color: #c2454c;
+}
