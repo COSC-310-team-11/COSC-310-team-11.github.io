@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 //this is what the bot knows
 var vocabulary = [
     ['hi', ['hello', 'greetings', 'hey there']],
+    ['good morning', 'Good morning, I can see the sun from up in space!'],
+    ['good night', 'Good night, looks like its a full moon today!'],
+    ['who are you', 'I am Cosmo, who are you?'],
     ['how are you', ['I am good', 'I am fine', 'I am doing well']],
     ['what is your name', 'I am Cosmo, an Astronaut'],
     ['what is your favorite color', 'I prefer white, like my spacesuit'],
