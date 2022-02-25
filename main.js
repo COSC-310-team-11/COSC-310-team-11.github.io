@@ -13,6 +13,9 @@ document.getElementById('userInput').addEventListener('keyup', function (event) 
 //this is what the bot knows
 var vocabulary = [
     ['hi', 'hello'],
+    ['good morning', 'Good morning, I can see the sun from up in space!'],
+    ['good night', 'Good night, looks like its a full moon today!'],
+    ['who are you', 'I am Cosmo, who are you?'],
     ['how are you', 'I am good'],
     ['what is your name', 'I am Cosmo, an Astronaut'],
     ['what is your favorite color', 'I prefer white, like my spacesuit'],
