@@ -84,15 +84,63 @@ function whatSaid() {
     //convert to lower case | remove punctuation | remove spaces
     var userInput = userInput.replace(punctRE, '').replace(/\s+/g, ' ').toLowerCase()
 
-    var bestmatching = bestMatch(userInput);
+    // clear the input box
+    input.value = '';
 
+    var bestmatching = bestMatch(userInput);
 
     var respo = getResponseFromVocabulary(bestmatching);
     //print out bot message
     addToChatLog('bot', respo);
+    spinImage();
 
-    // var dist = levenshteinDistance(vocabulary[i][0], userInput);
 }
+{ var spun = false; }
+// spin image over a time of 1 second
+function spinImage() {
+    var image = document.getElementById('Ai');
+    if (!spun)
+        image.classList.add('spin');
+    else
+        image.classList.remove('spin');
+    spun = !spun;
+}
+
+
+const addToChatLog = (poster, message) => {
+    //add to list in Reverse order
+    chatLog.unshift({ poster: poster, message: message });
+
+    // replace first h1 tag with h2 for BotRespo
+    var h1 = document.getElementById('botRespo');
+
+    //print out
+    document.getElementById('botRespo').innerHTML = chatLog.reduce(
+        (str, current_message, _) => {
+            if (current_message.poster === 'bot')
+                return str + `<h2 class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</h2>`;
+            else
+                return str + `<p class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</p>`;
+        },
+        ''
+    );
+    document.getElementById('botRespo').innerHTML = document.getElementById('botRespo').innerHTML.replace('h2', 'h1');
+}
+
+
+const getResponseFromVocabulary = (index) => {
+    //if there is just one response, return that
+    //if there are multiple, randomly choose one
+
+    const response = vocabulary[index][1];
+    if (Array.isArray(response)) {
+        return response[Math.floor(Math.random() * response.length)];
+    } else {
+        return response;
+    }
+
+};
+
 
 // Levenshtein Distance (Takes differences between 2 strings and returns the number of differences) 
 // Known algrothim
@@ -116,32 +164,4 @@ const levenshteinDistance = (str1 = '', str2 = '') => {
         }
     }
     return track[str2.length][str1.length];
-};
-
-
-
-const addToChatLog = (poster, message) => {
-    //add to list
-    chatLog.push({poster: poster, message: message});
-
-    //print out
-    document.getElementById('botRespo').innerHTML = chatLog.reduce(
-        (str, current_message, _) => {
-            return str + `<p class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</p>`;
-        },
-        ''
-    );
-}
-
-const getResponseFromVocabulary = (index) => {
-    //if there is just one response, return that
-    //if there are multiple, randomly choose one
-
-    const response = vocabulary[index][1];
-    if(Array.isArray(response)){
-        return response[Math.floor(Math.random() * response.length)];
-    }else{
-        return response;
-    }
-
 };
