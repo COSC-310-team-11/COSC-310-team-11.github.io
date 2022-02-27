@@ -7,7 +7,9 @@ Using the power of our chat engine you can simulate talking to a Astronaut!
 
 ![Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Astronaut_(97576)_-_The_Noun_Project.svg/512px-Astronaut_(97576)_-_The_Noun_Project.svg.png)
 
+## Authors
 
+[Live Demo](https://cosc-310-team-11.github.io/)
 ## Authors
 
 - [@John Elder](https://github.com/justchecking)
