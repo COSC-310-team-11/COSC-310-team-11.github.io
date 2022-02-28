@@ -71,6 +71,13 @@ function bestMatch(str1) {
     return bestMatch;
 }
 
+
+function fillidea() {
+    var input = document.getElementById('userInput');
+    // random from vocabulary
+    input.value = vocabulary[Math.floor(Math.random() * vocabulary.length)][0];
+}
+
 function whatSaid() {
     var input = document.getElementById('userInput');
     var userInput = input.value.toLowerCase();
