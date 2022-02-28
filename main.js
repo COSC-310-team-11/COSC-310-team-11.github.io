@@ -121,13 +121,17 @@ const addToChatLog = (poster, message) => {
     // replace first h1 tag with h2 for BotRespo
     var h1 = document.getElementById('botRespo');
 
+
+    var swap;
     //print out
     document.getElementById('botRespo').innerHTML = chatLog.reduce(
         (str, current_message, _) => {
-            if (current_message.poster === 'bot')
-                return str + `<h2 class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</h2>`;
+            if (current_message.poster === 'bot'){
+                swap = `<h2 class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</h2>`;
+                return str;
+            }
             else
-                return str + `<p class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</p>`;
+                return str + `<p class="${current_message.poster}_message">${current_message.poster}: ${current_message.message}</p>` + swap;
         },
         ''
     );
